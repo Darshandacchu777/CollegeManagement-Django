@@ -1,0 +1,39 @@
+{% extends 'main_app/base.html' %}
+
+{% block content %}
+<div class="min-h-screen bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center px-4">
+    <div class="max-w-4xl w-full bg-white rounded-2xl shadow-xl p-8 md:p-12">
+        <div class="text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Welcome to College Management System</h1>
+            <p class="text-lg text-gray-600 mb-8">Streamline your educational institution's administrative tasks with our comprehensive management solution.</p>
+            
+            <div class="space-y-4">
+                <a href="{% url 'login_page' %}" 
+                   class="inline-block bg-blue-600 text-white text-lg font-semibold px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors duration-300">
+                    Login to Dashboard
+                </a>
+            </div>
+        </div>
+
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="text-center p-6 rounded-lg bg-gray-50">
+                <div class="text-blue-600 text-2xl mb-3">👨‍🏫</div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Staff Management</h3>
+                <p class="text-gray-600">Efficiently manage staff records, attendance, and performance.</p>
+            </div>
+            
+            <div class="text-center p-6 rounded-lg bg-gray-50">
+                <div class="text-blue-600 text-2xl mb-3">👨‍🎓</div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Student Portal</h3>
+                <p class="text-gray-600">Track student progress, attendance, and academic performance.</p>
+            </div>
+            
+            <div class="text-center p-6 rounded-lg bg-gray-50">
+                <div class="text-blue-600 text-2xl mb-3">📊</div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Course Management</h3>
+                <p class="text-gray-600">Organize and manage courses, subjects, and academic sessions.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

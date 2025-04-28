@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>College Management System</title>
+  <link rel="stylesheet" href="{% static 'dist/css/adminlte.min.css' %}">
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+    .hero {
+      background-image: url("{% static 'dist/img/college_bg.jpg' %}");
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      background-blend-mode: overlay;
+    }
+    .hero h1 {
+      font-size: 60px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+    .btn-login {
+      padding: 12px 30px;
+      font-size: 20px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <h1>Welcome to College Management System</h1>
+    <p>Your academic management simplified.</p>
+    <a href="{% url 'login_page' %}" class="btn btn-success btn-login">Login</a>
+  </div>
+</body>
+</html>

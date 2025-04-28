@@ -147,7 +147,8 @@ STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
 STATICFILES_DIRS = [
-    BASE_DIR / "main_app/static"
+    BASE_DIR / "main_app/static",
+    BASE_DIR / "static"  # If needed, include other static directories here
 ]
 
 
