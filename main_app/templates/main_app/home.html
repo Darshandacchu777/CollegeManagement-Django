@@ -1,0 +1,190 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Management System</title>
+
+    <!-- Bootstrap & FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* 🔹 Navbar */
+        .navbar {
+            background: rgba(135, 135, 135, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ff6f61;
+        }
+
+        .btn-login {
+            background: linear-gradient(to right, #28A745,#28A745);
+            color: #fff;
+            font-weight: bold;
+            padding: 8px 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .navbar .btn-login:hover {
+            background: linear-gradient(to right, #28A745, #28A745);
+            color: white;
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+
+
+        /* 🚀 Hero Section with Background Image */
+        .hero {
+            background: url("{% static 'images/college-bg.jpg' %}") no-repeat center center;
+            background-size: cover;
+            height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        /* 🔥 Dark Overlay */
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        /* 🚀 Hero Content */
+        .hero-content {
+            position: relative;
+            color: #fff;
+            max-width: 700px;
+        }
+
+        /* 📌 Feature Grid (Third Card Slightly Bigger) */
+        .feature-box {
+           padding: 20px;
+           background: rgba(255, 255, 255, 0.1);
+           backdrop-filter: blur(8px);
+           border-radius: 12px;
+           text-align: center;
+           transition: all 0.3s ease-in-out;
+           box-shadow: 0px 3px 8px rgba(0,0,0,0.2);
+           min-height: 230px; /* Ensures all feature cards are equal height */
+        }
+
+     
+        /* ⚡ Footer with Image */
+        .footer {
+            background: url("{% static 'images/footer-bg.jpg' %}") no-repeat center center;
+            background-size: cover;
+            padding: 40px 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        .footer-overlay {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+        }
+
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #ff6f61;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- 🔹 Navbar -->
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container d-flex justify-content-between">
+            <a class="navbar-brand fw-bold" href="#">
+                HINDUSTAN COLLEGE
+            </a>
+            <div class="navbar-nav">
+                <a href="{% url 'login_page' %}" class="btn btn-login">Login</a>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- 🚀 Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1 class="fw-bold display-4">Empowering Future Education</h1>
+            <p class="lead">Manage students, staff, and courses effortlessly.</p>
+            <a href="{% url 'login_page' %}" class="btn btn-login">Get Started</a>
+        </div>
+    </div>
+
+    <!-- 🔥 Feature Grid -->
+    <div class="container mt-5">
+        <h2 class="text-center fw-bold">Key Features</h2>
+        <div class="row mt-4 text-center">
+            <div class="row mt-4 text-center">
+                <div class="row mt-4 text-center">
+                    <div class="col-md-4">
+                        <div class="feature-box">
+                            <i class="fa-solid fa-book fa-3x text-primary"></i>
+                            <h3 class="mt-3">Course Management</h3>
+                            <p>Organize and track courses seamlessly.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature-box">
+                            <i class="fa-solid fa-user-graduate fa-3x text-success"></i>
+                            <h3 class="mt-3">Student Records</h3>
+                            <p>Monitor attendance, grades, and feedback.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature-box feature-box-large">
+                            <i class="fa-solid fa-chalkboard-teacher fa-3x text-warning"></i>
+                            <h3 class="mt-3">Staff Management</h3>
+                            <p>Assign roles and streamline faculty operations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>           
+    <!-- 👨‍💻 Meet the Developers -->
+    
+    <!-- ⚡ Footer with Background Image -->
+    <footer class="footer">
+        <div class="footer-overlay">
+            <div class="container">
+                <div class="footer-links">
+                    <a href="#">About Us</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Contact</a>
+                </div>
+                <p class="mt-3">&copy; 2025 Hindustan College | Built for Excellence in Education</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
