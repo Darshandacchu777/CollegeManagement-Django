@@ -64,13 +64,6 @@ MIDDLEWARE = [
     # 'main_app.middleware.LoginCheckMiddleWare',
 ]
 
-CSRF_TRUSTED_ORIGINS = ["https://hindustancollegelms.onrender.com"]
-CSRF_COOKIE_SECURE = True
-
-SESSION_COOKIE_SECURE = True
-SESSION_COOKIE_SAMESITE = "Lax"
-
-
 
 ROOT_URLCONF = 'college_management_system.urls'
 
