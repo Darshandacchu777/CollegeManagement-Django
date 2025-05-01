@@ -63,7 +63,7 @@ def doLogin(request, **kwargs):
                 return redirect(reverse("student_home"))
         else:
             messages.error(request, "Invalid details")
-            return redirect("/")
+            return redirect(reverse("login_page"))
 
 
 
