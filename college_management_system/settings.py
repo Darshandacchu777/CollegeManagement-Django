@@ -64,7 +64,6 @@ MIDDLEWARE = [
     # 'main_app.middleware.LoginCheckMiddleWare',
 ]
 
-
 ROOT_URLCONF = 'college_management_system.urls'
 
 TEMPLATES = [
