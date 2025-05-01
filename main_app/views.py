@@ -52,7 +52,7 @@ def doLogin(request, **kwargs):
             return redirect('/')
         
         #Authenticate
-        user = authenticate(request, username=request.POST.get('email'), password=request.POST.get('password'))
+        user = EmailBackend.authenticate(request, username=request.POST.get('email'), password=request.POST.get('password'))
         if user != None:
             login(request, user)
             if user.user_type == '1':
@@ -63,7 +63,7 @@ def doLogin(request, **kwargs):
                 return redirect(reverse("student_home"))
         else:
             messages.error(request, "Invalid details")
-            return redirect(reverse("login_page"))
+            return redirect("/")
 
 
 
